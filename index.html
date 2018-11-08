@@ -5,22 +5,54 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1.0">
   <title>BS sitebuild</title>
+  <link rel="stylesheet" href="./style/style.css">
 </head>
 
 <body class="container">
   <header class="container header">
     <div class="header__top">
       <img src="./assets/images/swansky_logo.png" alt="Logo" class="header__logo">
-      <nav class="header__language-switcher">
+      <nav class="header__language-switcher clearfix">
         <ul>
           <li class="header__language-switcher--en">
             <div class="language-flag language-flag--en"></div>
-            En
+            <div class="language-flag__text">En</div>
             <i class="symbol-arrow"></i>
           </li>
         </ul>
       </nav>
+      
+      <input type="checkbox" id="hidden" class="hidden">
+      <label class="burger-menu" for="hidden">
+        <span></span>
+        <span></span>
+        <span></span>
+      </label>
+      <nav class="main-menu-mobile">
+        <div class="main-menu-mobile__items-wrapper">
+          <ul class="main-menu-mobile__items">
+            <li class="main-menu-mobile__item">Home</li>
+            <li class="main-menu-mobile__item">Destinations</li>
+            <li class="main-menu-mobile__item">Entertainment</li>
+            <li class="main-menu-mobile__item">News</li>
+            <li class="main-menu-mobile__item">Weather</li>
+            <li class="main-menu-mobile__item">Shopping</li>
+            <li class="main-menu-mobile__item">
+              <nav class="main-menu-mobile__language-switcher clearfix">
+                <ul>
+                  <li class="main-menu-mobile__language-switcher--en">
+                    <div class="language-flag language-flag--en"></div>
+                    <div class="language-flag__text">En</div>
+                    <i class="symbol-arrow"></i>
+                  </li>
+                </ul>
+              </nav>
+            </li>
+          </ul>
+        </div>
+      </nav>
     </div>
+
     <nav class="main-menu">
       <ul class="main-menu__items">
         <li class="main-menu__item">Home</li>
@@ -32,46 +64,59 @@
       </ul>
     </nav>
   </header>
-  <main class="container">
-    <div class="banner">728x90</div>
+  <main class="container-fluid">
+    <div class="row">
+      <div class="col-12">
+        <div class="banner banner-large">728x90</div>
+        <div class="banner banner-small">300x50</div>
+      </div>
+    </div>
 
     <div class="row">
       <div class="col-6">
-        <img src="https://placekitten.com/200/300" alt="">
+        <figure class="image-container">
+          <img src="https://placekitten.com/300/300" alt="Lorem">
+        </figure>
       </div>
       <div class="col-6">
-        <img src="https://placekitten.com/200/300" alt="">
+        <figure class="image-container">
+          <img src="https://placekitten.com/g/300/300" alt="Lorem">
+        </figure>
       </div>
     </div>
     <div class="row">
-      <div class="col-4">
+      <div class="col-4 box">
         <h4 class="box--title">Lorem ipsum</h4>
         <p class="box--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut tincidunt ante.
           Maecenas vitae ante at quam pretium fermentum eget placerat augue. Curabitur at tortor vehicula, molestie
           neque ut, dictum leo. Aenean mi magna, fermentum nec sapien et.</p>
       </div>
-      <div class="col-4">
+      <div class="col-4 box">
         <h4 class="box--title">Lorem ipsum</h4>
         <p class="box--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
-      <div class="col-4">
+      <div class="col-4 box">
         <h4 class="box--title">Lorem ipsum</h4>
         <p class="box--content">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
       </div>
     </div>
 
     <div class="row">
-
+        <div class="col-12">
+          <div class="article">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus ut tincidunt ante. Maecenas vitae ante at quam pretium fermentum eget placerat augue. Curabitur at tortor vehicula, molestie neque ut, dictum leo. Aenean mi magna, fermentum nec sapien et, lacinia laoreet sapien. Aliquam sed odio nec massa fermentum faucibus et sit amet quam. Donec tempor libero ut porttitor commodo. Quisque aliquet risus ut tempus cursus. Etiam et dictum odio. Etiam vestibulum, lectus non lobortis rhoncus, felis ante imperdiet lorem, id pulvinar felis ante id turpis. Integer id dictum lacus. Nam nec consequat mauris. Nam condimentum lectus est, at laoreet neque convallis eget.
+          </div>
+      </div>
     </div>
   </main>
-  <footer class="container">
-    <nav>
-      <ul>
-        <li>FAQ</li>
-        <li>Terms and Conditions</li>
+  <footer class="container footer">
+    <nav class="footer-menu">
+      <ul class="">
+        <li class="footer-menu__item">FAQ</li>
+        <li class="footer-menu__item">Terms and Conditions</li>
       </ul>
     </nav>
-    <p class="copy">Copyright Black Swan Avionics 2018</p>
+    <p class="footer__copy clearfix">Copyright Black Swan Avionics 2018</p>
   </footer>
 </body>
 
